@@ -41,13 +41,27 @@ namespace nes {
             u_int8_t pop();
 
             void step();
-        public:
+        public: // son loa registros de la cpu (u8) y el program counter (u16)
             u_int16_t counter;
             u_int8_t status;
             u_int8_t acum;
             u_int8_t sp;
             u_int8_t rx;
             u_int8_t ry;
+        private:
+            void AM_IMP();
+            void AM_ACC();
+            void AM_IMM();
+            void AM_ZRP();
+            void AM_ZRX();
+            void AM_ZRY();
+            void AM_REL();
+            void AM_ABS();
+            void AM_ABX();
+            void AM_ABY();
+            void AM_IND();
+            void AM_INX();
+            void AM_INY();
         private:
             u_int8_t mem[MEM_SIZE];
 
