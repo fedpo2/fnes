@@ -35,7 +35,12 @@ namespace nes {
             cpu();
             u_int8_t mem_read(u_int16_t);
             void mem_write(u_int16_t, u_int8_t);
-            u_int16_t mem_read_u16(u_int16_t)
+            u_int16_t mem_read_u16(u_int16_t); // NOTE: si no termina siendo útil talvez la borre
+
+            void push(u_int8_t);
+            u_int8_t pop();
+
+            void step();
         public:
             u_int16_t counter;
             u_int8_t status;
