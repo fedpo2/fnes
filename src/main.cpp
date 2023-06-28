@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     SetTargetFPS(60);
 
     //declaracion del hardware de nes
-    struct nes::cpu a;
+    nes::cpu a;
 
     //main loop
     while(!WindowShouldClose()){
