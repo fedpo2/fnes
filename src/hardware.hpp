@@ -30,6 +30,22 @@ namespace nes {
     const u_int16_t ROM_ADDR_START = 0x0600;
     const u_int8_t START_STACK_POINTER = 0xff;
 
+    enum addrMode {
+        Implicit,
+        Accumulator,
+        Immediate,
+        ZeroPage,
+        ZeroPageX,
+        ZeroPageY,
+        Relative,
+        Absolute,
+        AbsoluteX,
+        AbsoluteY,
+        Indirect,
+        IndirectX,
+        IndirectY
+    };
+
     class cpu {
         public:
             cpu();
@@ -48,6 +64,13 @@ namespace nes {
             u_int8_t sp;
             u_int8_t rx;
             u_int8_t ry;
+
+            addrMode addresing_mode;
+            u_int16_t direccion;
+            u_int8_t valor;
+            u_int8_t ciclos;
+            u_int8_t pagina_crusada;
+
         private:
             void AM_IMP();
             void AM_ACC();
@@ -67,21 +90,6 @@ namespace nes {
 
     };
 
-    enum addrMode {
-        Implicit,
-        Accumulator,
-        Immediate,
-        ZeroPage,
-        ZeroPageX,
-        ZeroPageY,
-        Relative,
-        Absolute,
-        AbsoluteX,
-        AbsoluteY,
-        Indirect,
-        IndirectX,
-        IndirectY
-    };
 }
 
 #endif // HARDWARE_STRUCTS_H_
