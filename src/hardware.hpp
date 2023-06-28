@@ -54,18 +54,19 @@ namespace nes {
     };
 
     enum addrMode {
+        Implicit,
         Accumulator,
-        Relative,
         Immediate,
         ZeroPage,
         ZeroPageX,
         ZeroPageY,
+        Relative,
         Absolute,
         AbsoluteX,
         AbsoluteY,
+        Indirect,
         IndirectX,
-        IndirectY,
-        NoneAddressing
+        IndirectY
     };
 }
 
