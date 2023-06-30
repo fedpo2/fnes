@@ -120,227 +120,263 @@ namespace nes {
 
 // Instrucciones
 
-    void I_adc() {
+    void cpu::I_adc() {
+        //logica instruccion
+        u_int8_t res = acum + valor + VALOR_BIT(status, CARRY_BIT);
+
+        // asignacion de flags
+        ASSIGN_BIT(status, OVERFLOW_BIT, ((~(acum ^ valor)) & (acum ^ res) & 0x80) >> 7);
+        ASSIGN_BIT(status, CARRY_BIT, res < acum);
+        ASSIGN_BIT(status, NEGATIVE_BIT, (res & 0x80) >> 7);
+        ASSIGN_BIT(status, CERO_BIT, res == 0);
+
+        // se da el valor al acumulador
+        acum = res;
+
+        //se incrementan los ciclos
+        if (addresing_mode == Immediate) {ciclos+=2;}
+
+        if (addresing_mode == ZeroPage)  {ciclos+=3;}
+
+        if (addresing_mode == ZeroPageX) {ciclos+=4;}
+
+        if (addresing_mode == Absolute)  {ciclos+=4;}
+
+        if (addresing_mode == AbsoluteX) {
+            if (pagina_crusada) ciclos++;
+            ciclos+=4;
+        }
+
+        if (addresing_mode == AbsoluteY) {
+            if (pagina_crusada) ciclos++;
+            ciclos+=4;
+        }
+
+        if (addresing_mode == IndirectX) {ciclos+=6;}
+
+        if (addresing_mode == IndirectY) {
+            if (pagina_crusada) ciclos++;
+            ciclos+=5;
+        }
+    }
+
+    void cpu::I_and() {
 
     }
 
-    void I_and() {
+    void cpu::I_asl() {
 
     }
 
-    void I_asl() {
+    void cpu::I_bcc() {
 
     }
 
-    void I_bcc() {
+    void cpu::I_bcs() {
 
     }
 
-    void I_bcs() {
+    void cpu::I_beq() {
 
     }
 
-    void I_beq() {
+    void cpu::I_bit() {
 
     }
 
-    void I_bit() {
+    void cpu::I_bmi() {
 
     }
 
-    void I_bmi() {
+    void cpu::I_bne() {
 
     }
 
-    void I_bne() {
+    void cpu::I_bpl() {
 
     }
 
-    void I_bpl() {
+    void cpu::I_brk() {
 
     }
 
-    void I_brk() {
+    void cpu::I_bvc() {
 
     }
 
-    void I_bvc() {
+    void cpu::I_bvs() {
 
     }
 
-    void I_bvs() {
+    void cpu::I_clc() {
 
     }
 
-    void I_clc() {
+    void cpu::I_cld() {
 
     }
 
-    void I_cld() {
+    void cpu::I_cli() {
 
     }
 
-    void I_cli() {
+    void cpu::I_clv() {
 
     }
 
-    void I_clv() {
+    void cpu::I_cmp() {
 
     }
 
-    void I_cmp() {
+    void cpu::I_cpx() {
 
     }
 
-    void I_cpx() {
+    void cpu::I_cpy() {
 
     }
 
-    void I_cpy() {
+    void cpu::I_dec() {
 
     }
 
-    void I_dec() {
+    void cpu::I_dex() {
 
     }
 
-    void I_dex() {
+    void cpu::I_dey() {
 
     }
 
-    void I_dey() {
+    void cpu::I_eor() {
 
     }
 
-    void I_eor() {
+    void cpu::I_inc() {
 
     }
 
-    void I_inc() {
+    void cpu::I_inx() {
 
     }
 
-    void I_inx() {
+    void cpu::I_iny() {
 
     }
 
-    void I_iny() {
+    void cpu::I_jmp() {
 
     }
 
-    void I_jmp() {
+    void cpu::I_jsr() {
 
     }
 
-    void I_jsr() {
+    void cpu::I_lda() {
 
     }
 
-    void I_lda() {
+    void cpu::I_ldx() {
 
     }
 
-    void I_ldx() {
+    void cpu::I_ldy() {
 
     }
 
-    void I_ldy() {
+    void cpu::I_lsr() {
 
     }
 
-    void I_lsr() {
+    void cpu::I_nop() {
 
     }
 
-    void I_nop() {
+    void cpu::I_ora() {
 
     }
 
-    void I_ora() {
+    void cpu::I_pha() {
 
     }
 
-    void I_pha() {
+    void cpu::I_php() {
 
     }
 
-    void I_php() {
+    void cpu::I_pla() {
 
     }
 
-    void I_pla() {
+    void cpu::I_plp() {
 
     }
 
-    void I_plp() {
+    void cpu::I_rol() {
 
     }
 
-    void I_rol() {
+    void cpu::I_ror() {
 
     }
 
-    void I_ror() {
+    void cpu::I_rti() {
 
     }
 
-    void I_rti() {
+    void cpu::I_rts() {
 
     }
 
-    void I_rts() {
+    void cpu::I_sbc() {
 
     }
 
-    void I_sbc() {
+    void cpu::I_sec() {
 
     }
 
-    void I_sec() {
+    void cpu::I_sed() {
 
     }
 
-    void I_sed() {
+    void cpu::I_sei() {
 
     }
 
-    void I_sei() {
+    void cpu::I_sta() {
 
     }
 
-    void I_sta() {
+    void cpu::I_stx() {
 
     }
 
-    void I_stx() {
+    void cpu::I_sty() {
 
     }
 
-    void I_sty() {
+    void cpu::I_tax() {
 
     }
 
-    void I_tax() {
+    void cpu::I_tay() {
 
     }
 
-    void I_tay() {
+    void cpu::I_tsx() {
 
     }
 
-    void I_tsx() {
+    void cpu::I_txa() {
 
     }
 
-    void I_txa() {
+    void cpu::I_txs() {
 
     }
 
-    void I_txs() {
-
-    }
-
-    void I_tya() {
+    void cpu::I_tya() {
 
     }
 
