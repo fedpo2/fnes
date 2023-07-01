@@ -161,222 +161,496 @@ namespace nes {
     }
 
     void cpu::I_and() {
+        //logica de la instruccion (WIP)
 
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
     }
 
     void cpu::I_asl() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bcc() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bcs() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_beq() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bit() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bmi() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bne() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bpl() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_brk() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bvc() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_bvs() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_clc() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_cld() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_cli() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_clv() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_cmp() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_cpx() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_cpy() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_dec() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_dex() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_dey() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_eor() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_inc() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_inx() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_iny() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_jmp() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_jsr() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_lda() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_ldx() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_ldy() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_lsr() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_nop() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_ora() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_pha() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_php() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_pla() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_plp() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_rol() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_ror() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_rti() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_rts() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sbc() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sec() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sed() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sei() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sta() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_stx() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_sty() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_tax() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_tay() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_tsx() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_txa() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_txs() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
     void cpu::I_tya() {
+        //logica de la instruccion (WIP)
+
+        // asignacion de flags (WIP)
+
+        // Incrementacion de ciclos (WIP)
 
     }
 
