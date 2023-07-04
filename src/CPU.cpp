@@ -1,4 +1,4 @@
-#include "hardware.hpp"
+#include "CPU.hpp"
 #include <sys/types.h>
 
 namespace nes {
