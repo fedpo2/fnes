@@ -2,7 +2,7 @@
 #include <iterator>
 #include <raylib.h>
 
-#include "hardware.hpp"
+#include "CPU.hpp"
 #include "instructions.hpp"
 
 using namespace std;
