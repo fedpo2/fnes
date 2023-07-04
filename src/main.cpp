@@ -1,3 +1,4 @@
+//Copyright (c) 2023 federico polidoro. All Rights Reserved.
 #include <iostream>
 #include <iterator>
 #include <raylib.h>

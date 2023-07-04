@@ -1,3 +1,4 @@
+//Copyright (c) 2023 federico polidoro. All Rights Reserved.
 #ifndef HARDWARE_STRUCTS_H_
 #define HARDWARE_STRUCTS_H_
 
