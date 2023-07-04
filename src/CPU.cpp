@@ -674,254 +674,254 @@ namespace nes {
             case 0x71: {AM_INY(); I_adc();}
 
         // I_and()
-            case 0x29: {AM_IMM();}
-            case 0x25: {AM_ZRP();}
-            case 0x35: {AM_ZRX();}
-            case 0x2D: {AM_ABS();}
-            case 0x3D: {AM_ABX();}
-            case 0x39: {AM_ABY();}
-            case 0x21: {AM_INX();}
-            case 0x31: {AM_INY();}
+            case 0x29: {AM_IMM(); I_and();}
+            case 0x25: {AM_ZRP(); I_and();}
+            case 0x35: {AM_ZRX(); I_and();}
+            case 0x2D: {AM_ABS(); I_and();}
+            case 0x3D: {AM_ABX(); I_and();}
+            case 0x39: {AM_ABY(); I_and();}
+            case 0x21: {AM_INX(); I_and();}
+            case 0x31: {AM_INY(); I_and();}
 
         // I_asl
-            case 0x0A: {AM_ACC();}
-            case 0x06: {AM_ZRP();}
-            case 0x16: {AM_ZRX();}
-            case 0x0E: {AM_ABS();}
-            case 0x1E: {AM_ABX();}
+            case 0x0A: {AM_ACC(); I_asl();}
+            case 0x06: {AM_ZRP(); I_asl();}
+            case 0x16: {AM_ZRX(); I_asl();}
+            case 0x0E: {AM_ABS(); I_asl();}
+            case 0x1E: {AM_ABX(); I_asl();}
 
         // I_bcc()
-            case 0x90: {AM_REL();}
+            case 0x90: {AM_REL(); I_bcc();}
 
         // I_bcs()
-            case 0xB0: {AM_REL();}
+            case 0xB0: {AM_REL(); I_bcs();}
 
         // I_beq()
-            case 0xF0: {AM_REL();}
+            case 0xF0: {AM_REL(); I_beq();}
 
         // I_bit()
-            case 0x24: {AM_ZRP();}
-            case 0x2C: {AM_ABS();}
+            case 0x24: {AM_ZRP(); I_bit();}
+            case 0x2C: {AM_ABS(); I_bit();}
 
         // I_bmi()
-            case 0x30: {AM_REL();}
+            case 0x30: {AM_REL(); I_bmi();}
 
         // I_bne()
-            case 0xD0: {AM_REL();}
+            case 0xD0: {AM_REL(); I_bne();}
 
         // I_bpl()
-            case 0x10: {AM_REL();}
+            case 0x10: {AM_REL(); I_bpl();}
 
         // I_brk()
-            case 0x00: {AM_IMP();}
+            case 0x00: {AM_IMP(); I_brk();}
 
         // I_bvc()
-            case 0x50: {AM_REL();}
+            case 0x50: {AM_REL(); I_bvc();}
 
         // I_clc()
-            case 0x18: {AM_IMP();}
+            case 0x18: {AM_IMP(); I_clc();}
 
         // I_cld()
-            case 0xD8: {AM_IMP();}
+            case 0xD8: {AM_IMP(); I_cld();}
 
         // I_cli()
-            case 0x58: {AM_IMP();}
+            case 0x58: {AM_IMP(); I_cli();}
 
         // I_clv()
-            case 0xB8: {AM_IMP();}
+            case 0xB8: {AM_IMP(); I_clv();}
 
         // I_cmp()
-            case 0xC9: {AM_IMM();}
-            case 0xC5: {AM_ZRP();}
-            case 0xD5: {AM_ZRX();}
-            case 0xCD: {AM_ABS();}
-            case 0xDD: {AM_ABX();}
-            case 0xD9: {AM_ABY();}
-            case 0xC1: {AM_INX();}
-            case 0xD1: {AM_INY();}
+            case 0xC9: {AM_IMM(); I_cmp();}
+            case 0xC5: {AM_ZRP(); I_cmp();}
+            case 0xD5: {AM_ZRX(); I_cmp();}
+            case 0xCD: {AM_ABS(); I_cmp();}
+            case 0xDD: {AM_ABX(); I_cmp();}
+            case 0xD9: {AM_ABY(); I_cmp();}
+            case 0xC1: {AM_INX(); I_cmp();}
+            case 0xD1: {AM_INY(); I_cmp();}
 
         // I_cpx()
-            case 0xE0: {AM_IMM();}
-            case 0xE4: {AM_ZRP();}
-            case 0xEC: {AM_ABS();}
+            case 0xE0: {AM_IMM(); I_cpx();}
+            case 0xE4: {AM_ZRP(); I_cpx();}
+            case 0xEC: {AM_ABS(); I_cpx();}
 
         // I_cpy()
-            case 0xC0: {AM_IMM();}
-            case 0xC4: {AM_ZRP();}
-            case 0xCC: {AM_ABS();}
+            case 0xC0: {AM_IMM(); I_cpy();}
+            case 0xC4: {AM_ZRP(); I_cpy();}
+            case 0xCC: {AM_ABS(); I_cpy();}
 
         // I_dec()
-            case 0xC6: {AM_ZRP();}
-            case 0xD6: {AM_ZRX();}
-            case 0xCE: {AM_ABS();}
-            case 0xDE: {AM_ABX();}
+            case 0xC6: {AM_ZRP(); I_dec();}
+            case 0xD6: {AM_ZRX(); I_dec();}
+            case 0xCE: {AM_ABS(); I_dec();}
+            case 0xDE: {AM_ABX(); I_dec();}
 
         // I_dex()
-            case 0xCA: {AM_IMP();}
+            case 0xCA: {AM_IMP(); I_dex();}
 
         // I_dey()
-            case 0x88: {AM_IMP();}
+            case 0x88: {AM_IMP(); I_dey();}
 
         // I_eor()
-            case 0x49: {AM_IMM();}
-            case 0x45: {AM_ZRP();}
-            case 0x55: {AM_ZRX();}
-            case 0x4D: {AM_ABS();}
-            case 0x5D: {AM_ABX();}
-            case 0x59: {AM_ABY();}
-            case 0x41: {AM_INX();}
-            case 0x51: {AM_INY();}
+            case 0x49: {AM_IMM(); I_eor();}
+            case 0x45: {AM_ZRP(); I_eor();}
+            case 0x55: {AM_ZRX(); I_eor();}
+            case 0x4D: {AM_ABS(); I_eor();}
+            case 0x5D: {AM_ABX(); I_eor();}
+            case 0x59: {AM_ABY(); I_eor();}
+            case 0x41: {AM_INX(); I_eor();}
+            case 0x51: {AM_INY(); I_eor();}
 
         // I_inc()
-            case 0xE6: {AM_ZRP();}
-            case 0xF6: {AM_ZRX();}
-            case 0xEE: {AM_ABS();}
-            case 0xFE: {AM_ABX();}
+            case 0xE6: {AM_ZRP(); I_inc();}
+            case 0xF6: {AM_ZRX(); I_inc();}
+            case 0xEE: {AM_ABS(); I_inc();}
+            case 0xFE: {AM_ABX(); I_inc();}
 
         // I_inx()
-            case 0xE8: {AM_IMP();}
+            case 0xE8: {AM_IMP(); I_inx();}
 
         // I_iny()
-            case 0xC8: {AM_IMP();}
+            case 0xC8: {AM_IMP(); I_iny();}
 
         // I_jmp()
-            case 0x4C: {AM_ABS();}
-            case 0x6C: {AM_IND();}
+            case 0x4C: {AM_ABS(); I_jmp();}
+            case 0x6C: {AM_IND(); I_jmp();}
 
         // I_jsr()
-            case 0x20: {AM_ABS();}
+            case 0x20: {AM_ABS(); I_jsr();}
 
         // I_lda()
-            case 0xA9: {AM_IMM();}
-            case 0xA5: {AM_ZRP();}
-            case 0xB5: {AM_ZRX();}
-            case 0xAD: {AM_ABS();}
-            case 0xBD: {AM_ABX();}
-            case 0xB9: {AM_ABY();}
-            case 0xA1: {AM_INX();}
-            case 0xB1: {AM_INY();}
+            case 0xA9: {AM_IMM(); I_lda();}
+            case 0xA5: {AM_ZRP(); I_lda();}
+            case 0xB5: {AM_ZRX(); I_lda();}
+            case 0xAD: {AM_ABS(); I_lda();}
+            case 0xBD: {AM_ABX(); I_lda();}
+            case 0xB9: {AM_ABY(); I_lda();}
+            case 0xA1: {AM_INX(); I_lda();}
+            case 0xB1: {AM_INY(); I_lda();}
 
         // I_ldx()
-            case 0xA2: {AM_IMM();}
-            case 0xA6: {AM_ZRP();}
-            case 0xB6: {AM_ZRY();}
-            case 0xAE: {AM_ABS();}
-            case 0xBE: {AM_ABY();}
+            case 0xA2: {AM_IMM(); I_ldx();}
+            case 0xA6: {AM_ZRP(); I_ldx();}
+            case 0xB6: {AM_ZRY(); I_ldx();}
+            case 0xAE: {AM_ABS(); I_ldx();}
+            case 0xBE: {AM_ABY(); I_ldx();}
 
         // I_ldy()
-            case 0xA0: {AM_IMM();}
-            case 0xA4: {AM_ZRP();}
-            case 0xB4: {AM_ZRX();}
-            case 0xAC: {AM_ABS();}
-            case 0xBC: {AM_ABX();}
+            case 0xA0: {AM_IMM(); I_ldy();}
+            case 0xA4: {AM_ZRP(); I_ldy();}
+            case 0xB4: {AM_ZRX(); I_ldy();}
+            case 0xAC: {AM_ABS(); I_ldy();}
+            case 0xBC: {AM_ABX(); I_ldy();}
 
         // I_lsr()
-            case 0x4A: {AM_ACC();}
-            case 0x46: {AM_ZRP();}
-            case 0x56: {AM_ZRX();}
-            case 0x4E: {AM_ABS();}
-            case 0x5E: {AM_ABX();}
+            case 0x4A: {AM_ACC(); I_lsr();}
+            case 0x46: {AM_ZRP(); I_lsr();}
+            case 0x56: {AM_ZRX(); I_lsr();}
+            case 0x4E: {AM_ABS(); I_lsr();}
+            case 0x5E: {AM_ABX(); I_lsr();}
 
         // I_nop()
-            case 0xEA: {AM_IMP();}
+            case 0xEA: {AM_IMP(); I_nop();}
 
         // I_ora()
-            case 0x09: {AM_IMM();}
-            case 0x05: {AM_ZRP();}
-            case 0x15: {AM_ZRX();}
-            case 0x0D: {AM_ABS();}
-            case 0x1D: {AM_ABX();}
-            case 0x19: {AM_ABY();}
-            case 0x01: {AM_INX();}
-            case 0x11: {AM_INY();}
+            case 0x09: {AM_IMM(); I_ora();}
+            case 0x05: {AM_ZRP(); I_ora();}
+            case 0x15: {AM_ZRX(); I_ora();}
+            case 0x0D: {AM_ABS(); I_ora();}
+            case 0x1D: {AM_ABX(); I_ora();}
+            case 0x19: {AM_ABY(); I_ora();}
+            case 0x01: {AM_INX(); I_ora();}
+            case 0x11: {AM_INY(); I_ora();}
 
         // I_pha()
-            case 0x48: {AM_IMP();}
+            case 0x48: {AM_IMP(); I_pha();}
 
         // I_php()
-            case 0x08: {AM_IMP();}
+            case 0x08: {AM_IMP(); I_php();}
 
         // I_pla()
-            case 0x68: {AM_IMP();}
+            case 0x68: {AM_IMP(); I_pla();}
 
         // I_plp()
-            case 0x28: {AM_IMP();}
+            case 0x28: {AM_IMP(); I_plp();}
 
         // I_rol()
-            case 0x2A: {AM_ACC();}
-            case 0x26: {AM_ZRP();}
-            case 0x36: {AM_ZRX();}
-            case 0x2E: {AM_ABS();}
-            case 0x3E: {AM_ABX();}
+            case 0x2A: {AM_ACC(); I_rol();}
+            case 0x26: {AM_ZRP(); I_rol();}
+            case 0x36: {AM_ZRX(); I_rol();}
+            case 0x2E: {AM_ABS(); I_rol();}
+            case 0x3E: {AM_ABX(); I_rol();}
 
         // I_ror()
-            case 0x6A: {AM_ACC();}
-            case 0x66: {AM_ZRP();}
-            case 0x76: {AM_ZRX();}
-            case 0x6E: {AM_ABS();}
-            case 0x7E: {AM_ABX();}
+            case 0x6A: {AM_ACC(); I_ror();}
+            case 0x66: {AM_ZRP(); I_ror();}
+            case 0x76: {AM_ZRX(); I_ror();}
+            case 0x6E: {AM_ABS(); I_ror();}
+            case 0x7E: {AM_ABX(); I_ror();}
 
         // I_rti()
-            case 0x40: {AM_IMP();}
+            case 0x40: {AM_IMP(); I_rti();}
 
         // I_rts()
-            case 0x60: {AM_IMP();}
+            case 0x60: {AM_IMP(); I_rts();}
 
         // I_sbc()
-            case 0xE9: {AM_IMM();}
-            case 0xE5: {AM_ZRP();}
-            case 0xF5: {AM_ZRX();}
-            case 0xED: {AM_ABS();}
-            case 0xFD: {AM_ABX();}
-            case 0xF9: {AM_ABY();}
-            case 0xE1: {AM_INX();}
-            case 0xF1: {AM_INY();}
+            case 0xE9: {AM_IMM(); I_sbc();}
+            case 0xE5: {AM_ZRP(); I_sbc();}
+            case 0xF5: {AM_ZRX(); I_sbc();}
+            case 0xED: {AM_ABS(); I_sbc();}
+            case 0xFD: {AM_ABX(); I_sbc();}
+            case 0xF9: {AM_ABY(); I_sbc();}
+            case 0xE1: {AM_INX(); I_sbc();}
+            case 0xF1: {AM_INY(); I_sbc();}
 
         // I_sec()
-            case 0x38: {AM_IMP();}
+            case 0x38: {AM_IMP(); I_sec();}
 
         // I_sed()
-            case 0xF8: {AM_IMP();}
+            case 0xF8: {AM_IMP(); I_sed();}
 
         // I_sei()
-            case 0x78: {AM_IMP();}
+            case 0x78: {AM_IMP(); I_sei();}
 
         // I_sta()
-            case 0x85: {AM_ZRP();}
-            case 0x95: {AM_ZRX();}
-            case 0x8D: {AM_ABS();}
-            case 0x9D: {AM_ABX();}
-            case 0x99: {AM_ABY();}
-            case 0x81: {AM_INX();}
-            case 0x91: {AM_INY();}
+            case 0x85: {AM_ZRP(); I_sta();}
+            case 0x95: {AM_ZRX(); I_sta();}
+            case 0x8D: {AM_ABS(); I_sta();}
+            case 0x9D: {AM_ABX(); I_sta();}
+            case 0x99: {AM_ABY(); I_sta();}
+            case 0x81: {AM_INX(); I_sta();}
+            case 0x91: {AM_INY(); I_sta();}
 
         // I_stx()
-            case 0x86: {AM_ZRP();}
-            case 0x96: {AM_ZRY();}
-            case 0x8E: {AM_ABS();}
+            case 0x86: {AM_ZRP(); I_stx();}
+            case 0x96: {AM_ZRY(); I_stx();}
+            case 0x8E: {AM_ABS(); I_stx();}
 
         // I_sty()
-            case 0x84: {AM_ZRP();}
-            case 0x94: {AM_ZRX();}
-            case 0x8C: {AM_ABS();}
+            case 0x84: {AM_ZRP(); I_sty();}
+            case 0x94: {AM_ZRX(); I_sty();}
+            case 0x8C: {AM_ABS(); I_sty();}
 
         // I_tax()
-            case 0xAA: {AM_IMP();}
+            case 0xAA: {AM_IMP(); I_tax();}
 
         // I_tay()
-            case 0xA8: {AM_IMP();}
+            case 0xA8: {AM_IMP(); I_tay();}
 
         // I_tsx()
-            case 0xBA: {AM_IMP();}
+            case 0xBA: {AM_IMP(); I_tsx();}
 
         // I_txa()
-            case 0x8A: {AM_IMP();}
+            case 0x8A: {AM_IMP(); I_txa();}
 
         // I_txs()
-            case 0x9A: {AM_IMP();}
+            case 0x9A: {AM_IMP(); I_txs();}
 
         // I_tya()
-            case 0x98: {AM_IMP();}
+            case 0x98: {AM_IMP(); I_tya();}
         }
     }
 }
