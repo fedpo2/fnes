@@ -4,7 +4,6 @@
 #include <raylib.h>
 
 #include "CPU.hpp"
-#include "instructions.hpp"
 
 using namespace std;
 
