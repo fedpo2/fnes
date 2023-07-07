@@ -135,38 +135,51 @@ namespace nes {
         acum = res;
 
         //se incrementan los ciclos
-        if (addresing_mode == Immediate) {ciclos+=2;}
-
-        if (addresing_mode == ZeroPage)  {ciclos+=3;}
-
-        if (addresing_mode == ZeroPageX) {ciclos+=4;}
-
-        if (addresing_mode == Absolute)  {ciclos+=4;}
-
+        if (addresing_mode == Immediate) ciclos+=2;
+        if (addresing_mode == ZeroPage) ciclos+=3;
+        if (addresing_mode == ZeroPageX) ciclos+=4;
+        if (addresing_mode == Absolute) ciclos+=4;
         if (addresing_mode == AbsoluteX) {
-            if (pagina_crusada) ciclos++;
             ciclos+=4;
+            if (pagina_crusada) ciclos++;
         }
-
         if (addresing_mode == AbsoluteY) {
-            if (pagina_crusada) ciclos++;
             ciclos+=4;
-        }
-
-        if (addresing_mode == IndirectX) {ciclos+=6;}
-
-        if (addresing_mode == IndirectY) {
             if (pagina_crusada) ciclos++;
+        }
+        if (addresing_mode == IndirectX) {ciclos+=6;}
+        if (addresing_mode == IndirectY) {
             ciclos+=5;
+            if (pagina_crusada) ciclos++;
         }
     }
 
     void cpu::I_and() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        acum &= valor;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, (acum & 0x80));
+        ASSIGN_BIT(status, CERO_BIT, (acum == 0));
 
         // Incrementacion de ciclos (WIP)
+        if (addresing_mode == Immediate) ciclos += 2;
+        if (addresing_mode == ZeroPage) ciclos += 3;
+        if (addresing_mode == ZeroPageX) ciclos += 4;
+        if (addresing_mode == Absolute) ciclos += 4;
+        if (addresing_mode == AbsoluteX) {
+            ciclos += 4;
+            if (pagina_crusada) ciclos++;
+        }
+        if (addresing_mode == AbsoluteY) {
+            ciclos += 4;
+            if (pagina_crusada) ciclos++;
+        }
+        if (addresing_mode == IndirectX) ciclos += 6;
+        if (addresing_mode == IndirectY) {
+            ciclos += 5;
+            if (pagina_crusada) ciclos++;
+        }
     }
 
     void cpu::I_asl() {
