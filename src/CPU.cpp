@@ -162,7 +162,7 @@ namespace nes {
         ASSIGN_BIT(status, NEGATIVE_BIT, (acum & 0x80));
         ASSIGN_BIT(status, CERO_BIT, (acum == 0));
 
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos 
         if (addresing_mode == Immediate) ciclos += 2;
         if (addresing_mode == ZeroPage) ciclos += 3;
         if (addresing_mode == ZeroPageX) ciclos += 4;
@@ -181,14 +181,34 @@ namespace nes {
             if (pagina_crusada) ciclos++;
         }
     }
-
     void cpu::I_asl() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        //NOTE puede que el mem_write() de abajo cause problemas por la addr
+        if (addresing_mode == Accumulator){
+            acum = asl_val(acum);
+        } else {
+            valor = asl_val(valor);
+            mem_write(direccion, valor);
+        }
 
-        // asignacion de flags (WIP)
+        // Incrementacion de ciclos
+        if (addresing_mode == Accumulator) ciclos += 2;
+        if (addresing_mode == ZeroPage) ciclos += 5;
+        if (addresing_mode == ZeroPageX) ciclos += 6;
+        if (addresing_mode == Absolute) ciclos += 6;
+        if (addresing_mode == AbsoluteX) ciclos += 7;
+    }
 
-        // Incrementacion de ciclos (WIP)
+    u_int8_t cpu::asl_val(u_int8_t data) {
+        u_int8_t carry = data & 0x80;
+        data <<= 1;
 
+        // asignacion de flags
+        ASSIGN_BIT(status, CARRY_BIT, carry);
+        ASSIGN_BIT(status, NEGATIVE_BIT, data & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, data == 0);
+
+        return data;
     }
 
     void cpu::I_bcc() {
@@ -731,6 +751,9 @@ namespace nes {
 
         // I_bvc()
             case 0x50: {AM_REL(); I_bvc();}
+
+        // I_bvs()
+            case 0x70: {AM_REL(); I_bvs();}
 
         // I_clc()
             case 0x18: {AM_IMP(); I_clc();}
