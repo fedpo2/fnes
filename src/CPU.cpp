@@ -693,9 +693,9 @@ namespace nes {
         ciclos = 0;
         pagina_crusada = 0;
 
-        u_int8_t cod_op = mem_read(counter++);
+        u_int8_t opcode = mem_read(counter++);
 
-        switch (cod_op) {
+        switch (opcode) {
 
         // I_adc() add with carry
             case 0x69: {AM_IMM(); I_adc();}
