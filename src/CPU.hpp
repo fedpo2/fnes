@@ -56,15 +56,15 @@ namespace nes {
 
             void push(u_int8_t);
             u_int8_t pop();
-
             void step();
+
         public: // son loa registros de la cpu (u8) y el program counter (u16)
-            u_int16_t counter;
-            u_int8_t status;
-            u_int8_t acum;
-            u_int8_t sp;
-            u_int8_t rx;
-            u_int8_t ry;
+            u_int16_t counter; // program counter
+            u_int8_t status;   // flags
+            u_int8_t acum;     // acumulador
+            u_int8_t sp;       // stack pointer
+            u_int8_t rx;       // x register
+            u_int8_t ry;       // y register
 
             addrMode addresing_mode;
             u_int16_t direccion;
@@ -144,6 +144,8 @@ namespace nes {
             void I_txa();
             void I_txs();
             void I_tya();
+
+            u_int8_t asl_val(u_int8_t);
         private:
             u_int8_t mem[MEM_SIZE];
 
