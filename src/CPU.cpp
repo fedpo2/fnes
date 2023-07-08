@@ -312,12 +312,11 @@ namespace nes {
     }
 
     void cpu::I_clc() {
-        //logica de la instruccion (WIP)
-
-        // asignacion de flags (WIP)
+        //logica de la instruccion
+        CLEAR_BIT(status, CARRY_BIT);
 
         // Incrementacion de ciclos (WIP)
-
+        ciclos+=2;
     }
 
     void cpu::I_cld() {
