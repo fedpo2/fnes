@@ -29,6 +29,16 @@ namespace nes {
         return hi;
     }
 
+    void cpu::push(u_int8_t data){
+        mem_write(sp + 256, data);
+        sp--;
+    }
+
+    u_int8_t cpu::pop(){
+        sp++;
+        return mem_read(sp + 256);
+    }
+
 // AM_
 //
 
