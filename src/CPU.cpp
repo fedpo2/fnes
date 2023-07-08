@@ -5,7 +5,7 @@
 namespace nes {
     cpu::cpu(){
         counter = 0;
-        status = 0;
+        status = 0x24;
         acum = 0;
         sp = nes::START_STACK_POINTER;
         rx = 0;
