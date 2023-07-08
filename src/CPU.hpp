@@ -29,7 +29,7 @@ namespace nes {
     const u_int16_t MEM_SIZE = 0xffff;
     const u_int16_t RESET_INT_ADDR = 0xfffc;
     const u_int16_t ROM_ADDR_START = 0x0600;
-    const u_int8_t START_STACK_POINTER = 0xff;
+    const u_int8_t START_STACK_POINTER = 0xfd;
 
     enum addrMode {
         Implicit,
