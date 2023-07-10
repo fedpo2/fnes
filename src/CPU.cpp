@@ -345,39 +345,39 @@ namespace nes {
 
     void cpu::I_cmp() {
         //logica de la instruccion
-	u_int8_t cmp = acum - valor;
-	   	
-        // asignacion de flags
-	ASSIGN_BIT(status, CARRY_BIT, acum =< valor);
-	ASSIGN_BIT(status, CERO_BIT, acum == valor);
-	ASSIGN_BIT(status, NERGATIVE_BIT, cmp & 0x80);
+    u_int8_t cmp = acum - valor;
 
-	// Incrementacion de ciclos
-	if (addresing_mode == Immediate) ciclos += 2; 
-	if (addresing_mode == ZeroPage) ciclos += 3;
-	if (addresing_mode == ZeroPageX) ciclos += 4;
-	if (addresing_mode == Absolute) ciclos += 4;
-	if (addresing_mode == AbsoluteX) {
-		ciclos += 2;
-		if (pagina_crusada) ciclos++;
-	}
-	if (addresing_mode == AbsoluteY) {
-		ciclos += 4;
-		if(pagina_crusada) ciclos++;
-	}
-	
-	if (addresing_mode == IndirectX) ciclos += 6;
-	if (addresing_mode == IndirectY) { 
-		ciclos += 5;
-		if(pagina_crusada) ciclos++;
-	}
+        // asignacion de flags
+    ASSIGN_BIT(status, CARRY_BIT, acum =< valor);
+    ASSIGN_BIT(status, CERO_BIT, acum == valor);
+    ASSIGN_BIT(status, NERGATIVE_BIT, cmp & 0x80);
+
+    // Incrementacion de ciclos
+    if (addresing_mode == Immediate) ciclos += 2;
+    if (addresing_mode == ZeroPage) ciclos += 3;
+    if (addresing_mode == ZeroPageX) ciclos += 4;
+    if (addresing_mode == Absolute) ciclos += 4;
+    if (addresing_mode == AbsoluteX) {
+        ciclos += 2;
+        if (pagina_crusada) ciclos++;
+    }
+    if (addresing_mode == AbsoluteY) {
+        ciclos += 4;
+        if(pagina_crusada) ciclos++;
+    }
+
+    if (addresing_mode == IndirectX) ciclos += 6;
+    if (addresing_mode == IndirectY) {
+        ciclos += 5;
+        if(pagina_crusada) ciclos++;
+    }
 
     }
 
     void cpu::I_cpx() {
         //logica de la instruccion (WIP)
 	u_int8_t cmp = rx - valor;
-	
+
         // asignacion de flags (WIP)
 
 
