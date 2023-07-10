@@ -376,10 +376,8 @@ namespace nes {
 
     void cpu::I_cpx() {
         //logica de la instruccion (WIP)
-	u_int8_t cmp = rx - valor;
-	
+	u_int8_t cmp = rx - calor
         // asignacion de flags (WIP)
-
 
         // Incrementacion de ciclos (WIP)
 
