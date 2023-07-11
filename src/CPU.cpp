@@ -348,9 +348,9 @@ namespace nes {
         u_int8_t cmp = acum - valor;
 
         // asignacion de flags
-        ASSIGN_BIT(status, CARRY_BIT, acum =< valor);
+        ASSIGN_BIT(status, CARRY_BIT, acum >= valor);
         ASSIGN_BIT(status, CERO_BIT, acum == valor);
-        ASSIGN_BIT(status, NERGATIVE_BIT, cmp & 0x80);
+        ASSIGN_BIT(status, NEGATIVE_BIT, cmp & 0x80);
 
         // Incrementacion de ciclos
         if (addresing_mode == Immediate) ciclos += 2;
