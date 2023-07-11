@@ -388,6 +388,7 @@ namespace nes {
         if (addresing_mode == ZeroPage) ciclos+=3;
         if (addresing_mode == Absolute) ciclos+=4;
     }
+
     void cpu::I_cpy() {
         //logica de la instruccion
         u_int8_t cmp = ry - valor;
