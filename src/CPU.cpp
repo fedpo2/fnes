@@ -404,11 +404,14 @@ namespace nes {
     }
 
     void cpu::I_dec() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        mem_write(direccion, valor);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        if (addresing_mode == ZeroPage) ciclos+=5;
+        if (addresing_mode == ZeroPageX) ciclos+=6;
+        if (addresing_mode == Absolute) ciclos+=6;
+        if (addresing_mode == AbsoluteX) ciclos+=7;
 
     }
 
