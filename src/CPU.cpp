@@ -410,7 +410,6 @@ namespace nes {
         ASSIGN_BIT(status, NEGATIVE_BIT, valor & 0x80);
 
         //logica de la instruccion
-        //   valor--
         mem_write(direccion, valor);
 
         // Incrementacion de ciclos
