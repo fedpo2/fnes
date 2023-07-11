@@ -404,7 +404,13 @@ namespace nes {
     }
 
     void cpu::I_dec() {
+        // asignacion de flags
+        valor--;
+        ASSIGN_BIT(status, CERO_BIT, valor == 0);
+        ASSIGN_BIT(status, NEGATIVE_BIT, valor & 0x80);
+
         //logica de la instruccion
+        //   valor--
         mem_write(direccion, valor);
 
         // Incrementacion de ciclos
