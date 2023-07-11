@@ -422,12 +422,15 @@ namespace nes {
     }
 
     void cpu::I_dex() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        rx--;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, CERO_BIT, rx == 0);
+        ASSIGN_BIT(status, NEGATIVE_BIT, rx & 0x80);
 
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        if (addresing_mode == Implicit) ciclos+=2;
     }
 
     void cpu::I_dey() {
