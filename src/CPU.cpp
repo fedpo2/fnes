@@ -375,16 +375,19 @@ namespace nes {
     }
 
     void cpu::I_cpx() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
         u_int8_t cmp = rx - valor;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, CARRY_BIT, rx >= valor);
+        ASSIGN_BIT(status, CERO_BIT, rx == valor);
+        ASSIGN_BIT(status, NEGATIVE_BIT, cmp & 0x80);
 
-
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        if (addresing_mode == Immediate) ciclos+=2;
+        if (addresing_mode == ZeroPage) ciclos+=3;
+        if (addresing_mode == Absolute) ciclos+=4;
     }
-
     void cpu::I_cpy() {
         //logica de la instruccion (WIP)
 
