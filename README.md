@@ -1,5 +1,7 @@
 # FNES - another NES emulator
 
+aun está en una etapa muy temprana del desarrollo
+
 ## Instalación 🤓 
 - Dependencias:
 1. g++
