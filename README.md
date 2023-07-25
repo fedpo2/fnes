@@ -1,4 +1,4 @@
-# FNES - another NES emulator
+# FNES - Fede's NES emulator
 
 aun está en una etapa muy temprana del desarrollo
 
