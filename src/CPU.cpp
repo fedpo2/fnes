@@ -620,11 +620,8 @@ namespace nes {
     }
 
     void cpu::I_nop() {
-        //logica de la instruccion (WIP)
-
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        //logica de la instruccion
+        ciclos+=2;
 
     }
 
