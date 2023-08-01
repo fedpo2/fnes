@@ -716,30 +716,27 @@ namespace nes {
     }
 
     void cpu::I_sec() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        SET_BIT(status, CARRY_BIT);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_sed() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        SET_BIT(status, DECIMAL_BIT);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_sei() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        SET_BIT(status, INT_BIT);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_sta() {
