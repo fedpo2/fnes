@@ -504,6 +504,7 @@ namespace nes {
 
         // Incrementacion de ciclos
         if (addresing_mode == Immediate) ciclos+=2;
+    }
 
     void cpu::I_iny() {
         //logica de la instruccion
