@@ -144,7 +144,9 @@ namespace nes {
             void I_txs();
             void I_tya();
 
+            //funciones auxiliares
             u_int8_t asl_val(u_int8_t);
+            void tickNewPage(u_int16_t, u_int8_t);
         private:
             u_int8_t mem[MEM_SIZE];
 
