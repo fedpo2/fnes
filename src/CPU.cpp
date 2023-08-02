@@ -768,57 +768,72 @@ namespace nes {
     }
 
     void cpu::I_tax() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        rx = acum;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, rx & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, rx == 0);
 
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_tay() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        ry = acum;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, ry & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, ry == 0);
 
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_tsx() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        rx = sp;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, rx & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, rx == 0);
 
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        ciclos+=2;
 
     }
 
     void cpu::I_txa() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        acum = rx;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, acum & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, acum == 0);
 
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_txs() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        sp = rx;
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
     void cpu::I_tya() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        acum = ry;
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, NEGATIVE_BIT, acum & 0x80);
+        ASSIGN_BIT(status, CERO_BIT, acum == 0);
 
-        // Incrementacion de ciclos (WIP)
-
+        // Incrementacion de ciclos
+        ciclos+=2;
     }
 
 
