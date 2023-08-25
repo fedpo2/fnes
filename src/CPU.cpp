@@ -525,6 +525,7 @@ namespace nes {
 
         // Incrementacion de ciclos
         if (addresing_mode == Immediate) ciclos+=2;
+    }
 
     void cpu::I_jmp() {
         //logica de la instruccion (WIP)
