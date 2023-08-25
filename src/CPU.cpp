@@ -668,43 +668,45 @@ namespace nes {
                 ciclos++;
             }
         }
-
-
     }
 
     void cpu::I_pha() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        push(acum);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        ciclos+=3;
 
     }
 
     void cpu::I_php() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        push(status);
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        ciclos+=3;
 
     }
 
     void cpu::I_pla() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        acum = pop();
 
-        // asignacion de flags (WIP)
+        // asignacion de flags
+        ASSIGN_BIT(status, CERO_BIT, acum == 0);
+        ASSIGN_BIT(status, NEGATIVE_BIT, acum & 0x80);
 
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        ciclos+=4;
 
     }
 
     void cpu::I_plp() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        status = pop();
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        ciclos+=4;
 
     }
 
