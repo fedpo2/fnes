@@ -749,29 +749,39 @@ namespace nes {
     }
 
     void cpu::I_sta() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        valor = acum;
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        if (addresing_mode == ZeroPage) ciclos+=3;
+        if (addresing_mode == ZeroPageX) ciclos+=4;
+        if (addresing_mode == Absolute) ciclos+=4;
+        if (addresing_mode == AbsoluteX) ciclos+=5;
+        if (addresing_mode == AbsoluteY) ciclos+=5;
+        if (addresing_mode == IndirectX) ciclos+=6;
+        if (addresing_mode == IndirectY) ciclos+=6;
 
     }
 
     void cpu::I_stx() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        valor = rx;
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        if (addresing_mode == ZeroPage) ciclos+=3;
+        if (addresing_mode == ZeroPageY) ciclos+=4;
+        if (addresing_mode == Absolute) ciclos+=4;
 
     }
 
     void cpu::I_sty() {
-        //logica de la instruccion (WIP)
+        //logica de la instruccion
+        valor = ry;
 
-        // asignacion de flags (WIP)
-
-        // Incrementacion de ciclos (WIP)
+        // Incrementacion de ciclos
+        if (addresing_mode == ZeroPage) ciclos+=3;
+        if (addresing_mode == ZeroPageX) ciclos+=4;
+        if (addresing_mode == Absolute) ciclos+=4;
 
     }
 
