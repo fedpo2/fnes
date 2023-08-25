@@ -39,7 +39,7 @@ namespace nes {
         return mem_read(sp + 256);
     }
 
-    void tickNewPage(u_int16_t pc, u_int8_t ticks = 0){
+    void cpu::tickNewPage(u_int16_t pc, u_int8_t ticks = 0){
         u_int16_t pca = pc >> 8;
         u_int16_t pcb = counter >> 8;
 

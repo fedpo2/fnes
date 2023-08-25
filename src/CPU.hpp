@@ -70,6 +70,7 @@ namespace nes {
             u_int16_t direccion;
             u_int8_t valor;
             u_int8_t ciclos;
+            u_int8_t pagina_crusada;
 
         private:
             void AM_IMP();
@@ -87,41 +88,41 @@ namespace nes {
             void AM_INY();
 
             // instrucciones
-            void I_adc(u_int8_t);
-            void I_and(u_int8_t);
+            void I_adc();
+            void I_and();
             void I_asl();
-            void I_bcc(u_int8_t);
-            void I_bcs(u_int8_t);
-            void I_beq(u_int8_t);
+            void I_bcc();
+            void I_bcs();
+            void I_beq();
             void I_bit();
-            void I_bmi(u_int8_t);
-            void I_bne(u_int8_t);
-            void I_bpl(u_int8_t);
+            void I_bmi();
+            void I_bne();
+            void I_bpl();
             void I_brk();
-            void I_bvc(u_int8_t);
-            void I_bvs(u_int8_t);
+            void I_bvc();
+            void I_bvs();
             void I_clc();
             void I_cld();
             void I_cli();
             void I_clv();
-            void I_cmp(u_int8_t);
+            void I_cmp();
             void I_cpx();
             void I_cpy();
             void I_dec();
             void I_dex();
             void I_dey();
-            void I_eor(u_int8_t);
+            void I_eor();
             void I_inc();
             void I_inx();
             void I_iny();
             void I_jmp();
             void I_jsr();
-            void I_lda(u_int8_t);
-            void I_ldx(u_int8_t);
-            void I_ldy(u_int8_t);
+            void I_lda();
+            void I_ldx();
+            void I_ldy();
             void I_lsr();
             void I_nop();
-            void I_ora(u_int8_t);
+            void I_ora();
             void I_pha();
             void I_php();
             void I_pla();
@@ -130,7 +131,7 @@ namespace nes {
             void I_ror();
             void I_rti();
             void I_rts();
-            void I_sbc(u_int8_t);
+            void I_sbc();
             void I_sec();
             void I_sed();
             void I_sei();
@@ -147,6 +148,7 @@ namespace nes {
             //funciones auxiliares
             u_int8_t asl_val(u_int8_t);
             void tickNewPage(u_int16_t, u_int8_t);
+
         private:
             u_int8_t mem[MEM_SIZE];
 
